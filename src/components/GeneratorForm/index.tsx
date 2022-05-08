@@ -40,7 +40,7 @@ export function GeneratorForm({onLinkGenerated}: GeneratorFormProps) {
 
     return <>
         <div className="flex flex-col justify-center items-center">
-            <GeneratorFormSelect label="Selecione a plataforma" emptyMessage="Nenhum item selecionado"
+            <GeneratorFormSelect label="Selecione a plataforma que você está" emptyMessage="Nenhum item selecionado"
                                  options={selectTypes}
                                  onGeneratorFormSelectChange={setSelectedType} inputValue={selectedType}/>
             <GeneratorFormInput label="Número do Celular" mask="(99) 99999-9999" inputValue={phone}
