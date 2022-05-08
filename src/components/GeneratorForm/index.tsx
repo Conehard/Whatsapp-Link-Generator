@@ -29,9 +29,9 @@ export function GeneratorForm({onLinkGenerated}: GeneratorFormProps) {
         const phoneNumber = phone.replace(/\D/g, '');
         let link = '';
         if (selectedType === 'MOBILE') {
-            link = `https://api.whatsapp.com/send?phone=55${phoneNumber}&text=${message}`;
+            link = `https://api.whatsapp.com/send?phone=55${phoneNumber}&text=${encodeURI(message)}`;
         } else {
-            link = `https://web.whatsapp.com/send?phone=55${phoneNumber}&text=${message}`;
+            link = `https://web.whatsapp.com/send?phone=55${phoneNumber}&text=${encodeURI(message)}`;
         }
         if (link) {
             onLinkGenerated(link);
